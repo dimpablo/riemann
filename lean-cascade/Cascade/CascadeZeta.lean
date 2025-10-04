@@ -1,6 +1,7 @@
 import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Analysis.Complex.Trigonometric
-import Mathlib.Analysis.Complex.Exponential
+import Mathlib.Analysis.Calculus.Deriv
+import Mathlib.Analysis.SpecialFunctions.Gamma.Deriv
 
 open Complex
 open scoped Real Topology
@@ -26,14 +27,19 @@ lemma differentiableAt_chi {s : ℂ} (hs₁ : ∀ n : ℕ, s ≠ -n) :
     DifferentiableAt ℂ (fun z ↦ chi z) s := by
   -- chi z = 2 * (2π)^(-z) * Γ z * cos(π z / 2)
   have h1 : DifferentiableAt ℂ (fun z ↦ (2 * π : ℂ) ^ (-z)) s := by
-    -- z ↦ a^(-z) is entire for a ≠ 0
-    have : (2 * π : ℂ) ≠ 0 := by
-      have : (π : ℝ) ≠ 0 := by exact Real.pi_ne_zero
-      have h2 : (2 * π : ℝ) ≠ 0 := by nlinarith
-      simpa using (by exact_mod_cast (mul_ne_zero (by norm_num) this))
-    -- use differentiability of exp ∘ (z ↦ -z * log a)
-    simpa [Complex.cpow_def] using
-      ((differentiableAt_id.const_mul (-Complex.log (2 * π))).cexp)
+    -- use const_cpow: z ↦ c ^ z is differentiable where defined; here (-z)
+    have hconst : DifferentiableAt ℂ (fun z ↦ -(z)) s :=
+      differentiableAt_id.neg
+    have hcpow : DifferentiableAt ℂ (fun z ↦ (2 * π : ℂ) ^ z) (-s) := by
+      -- constant cpow is differentiable at all z
+      simpa using (differentiableAt_const_cpow_of_neZero (z := (2 * π : ℂ)) (t := -s)
+        (by
+          have : (π : ℝ) ≠ 0 := Real.pi_ne_zero
+          have : (2 * π : ℝ) ≠ 0 := by nlinarith
+          have : (2 * π : ℂ) ≠ 0 := by simpa using (mul_ne_zero (by norm_num) (by exact_mod_cast this))
+          exact this))
+    -- compose with (-·)
+    exact hcpow.comp _ hconst
   have h2 : DifferentiableAt ℂ (fun z ↦ Gamma z) s :=
     differentiableAt_Gamma s hs₁
   have h3 : DifferentiableAt ℂ (fun z ↦ cos (π * z / 2)) s := by
@@ -65,7 +71,11 @@ lemma deriv_identity {ρ : ℂ}
   have hderiv := DifferentiableAt.congr_deriv hF hG ?hEq
   · -- chain rule on the left: deriv (ζ ∘ (1-·)) ρ = deriv ζ (1-ρ) * deriv (1-·) ρ = - deriv ζ (1-ρ)
     have hleft : deriv (fun z ↦ riemannZeta (1 - z)) ρ = - deriv riemannZeta (1 - ρ) := by
-      simpa [one_div, inv_one, sub_eq_add_neg, deriv.comp, deriv_const_sub]
+      -- deriv (f ∘ (1-·)) = deriv f (1-ρ) * deriv (1-·) at ρ, with deriv (1-·) = -1
+      have : deriv (fun z ↦ 1 - z) ρ = -1 := by
+        simpa [sub_eq, one_mul] using (deriv_const_sub (c:= (1:ℂ)) (f:=fun z => z) ρ)
+      simpa [deriv.comp, this, mul_comm] using
+        (deriv.comp ρ riemannZeta (fun z ↦ 1 - z))
     -- product rule on the right: deriv (χ * ζ) ρ = deriv χ ρ * ζ ρ + χ ρ * deriv ζ ρ
     have hright : deriv (fun z ↦ chi z * riemannZeta z) ρ =
         (deriv chi ρ) * riemannZeta ρ + (chi ρ) * deriv riemannZeta ρ := by
