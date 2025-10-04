@@ -1,0 +1,26 @@
+DIGEST 1198b1c32af74e2c1beab7b25848a808
+Fcascade_coq
+R24:28 Coq.Reals.Reals <> <> lib
+R55:59 Coq.Reals.Reals <> <> lib
+R93:102 Coquelicot.Coquelicot <> <> lib
+R104:110 Coquelicot.Complex <> <> lib
+R112:117 Coquelicot.Series <> <> lib
+R119:127 Coquelicot.Hierarchy <> <> lib
+R129:140 Coquelicot.Rcomplements <> <> lib
+mod 287:301 <> CascadeAnalysis
+ax 400:403 CascadeAnalysis Cpow
+R408:411 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R407:407 Coquelicot.Complex <> C def
+R413:416 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R412:412 Coquelicot.Complex <> C def
+R417:417 Coquelicot.Complex <> C def
+ax 430:433 CascadeAnalysis Csin
+R438:441 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R437:437 Coquelicot.Complex <> C def
+R442:442 Coquelicot.Complex <> C def
+ax 455:460 CascadeAnalysis CGamma
+R465:468 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R464:464 Coquelicot.Complex <> C def
+R469:469 Coquelicot.Complex <> C def
+def 484:485 CascadeAnalysis C2
+R489:489 Coquelicot.Complex <> C def
