@@ -1,0 +1,93 @@
+DIGEST e49857bf16e19c0210fb76dab9f13a82
+Fcascade
+R24:27 Coq.Lists.List <> <> lib
+R29:31 Coq.micromega.Lia <> <> lib
+R33:41 Coq.Logic.Classical <> <> lib
+R51:63 Coq.Lists.List ListNotations <> mod
+sec 100:106 <> Cascade
+var 120:120 Cascade C
+var 141:144 Cascade zero
+R149:152 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R148:148 cascade <> Cascade.C var
+var 170:180 Cascade on_critical
+R185:188 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R184:184 cascade <> Cascade.C var
+def 209:220 <> off_critical
+R227:227 cascade <> Cascade.C var
+binder 223:223 <> z:7
+R246:249 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R240:243 cascade <> Cascade.zero var
+R245:245 cascade <> z:7 var
+R250:251 Coq.Init.Logic <> ::type_scope:'~'_x not
+R252:262 cascade <> Cascade.on_critical var
+R264:264 cascade <> z:7 var
+var 379:390 Cascade cascade_many
+R398:398 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R423:431 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R399:405 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R407:408 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 406:406 <> z:8
+R409:420 cascade <> off_critical def
+R422:422 cascade <> z:8 var
+R443:445 Coq.Init.Datatypes <> nat ind
+binder 439:439 <> n:9
+R448:454 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R465:472 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R459:462 Coq.Init.Datatypes <> list ind
+R464:464 cascade <> Cascade.C var
+binder 455:455 <> l:10
+R494:497 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R473:478 Coq.Lists.List <> Forall ind
+R493:493 cascade <> l:10 var
+R480:491 cascade <> off_critical def
+R505:508 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R498:502 Coq.Lists.List <> NoDup ind
+R504:504 cascade <> l:10 var
+R517:519 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R509:514 Coq.Init.Datatypes <> length def
+R516:516 cascade <> l:10 var
+R520:520 Coq.Init.Datatypes <> S constr
+R522:522 cascade <> n:9 var
+var 640:653 Cascade density_finite
+R661:667 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R675:676 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R672:674 Coq.Init.Datatypes <> nat ind
+binder 668:668 <> N:13
+R688:691 Coq.Init.Datatypes <> list ind
+R693:693 cascade <> Cascade.C var
+binder 684:684 <> l:14
+R723:726 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R702:707 Coq.Lists.List <> Forall ind
+R722:722 cascade <> l:14 var
+R709:720 cascade <> off_critical def
+R734:737 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R727:731 Coq.Lists.List <> NoDup ind
+R733:733 cascade <> l:14 var
+R746:749 Coq.Init.Peano <> ::nat_scope:x_'<='_x not
+R738:743 Coq.Init.Datatypes <> length def
+R745:745 cascade <> l:14 var
+R750:750 cascade <> N:13 var
+prf 858:872 <> cascade_theorem
+R880:881 Coq.Init.Logic <> ::type_scope:'~'_x not
+R882:888 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R890:891 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 889:889 <> z:17
+R892:903 cascade <> off_critical def
+R905:905 cascade <> z:17 var
+R946:959 cascade <> Cascade.density_finite var
+R988:999 cascade <> Cascade.cascade_many var
+R988:999 cascade <> Cascade.cascade_many var
+prf 1184:1204 <> all_zeros_on_critical
+binder 1219:1219 <> z:18
+R1228:1231 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1222:1225 cascade <> Cascade.zero var
+R1227:1227 cascade <> z:18 var
+R1232:1242 cascade <> Cascade.on_critical var
+R1244:1244 cascade <> z:18 var
+R1287:1293 Coq.Logic.Classical_Prop <> classic prfax
+R1296:1306 cascade <> Cascade.on_critical var
+R1287:1293 Coq.Logic.Classical_Prop <> classic prfax
+R1296:1306 cascade <> Cascade.on_critical var
+R1356:1370 cascade <> cascade_theorem thm
+R1356:1370 cascade <> cascade_theorem thm
+R1427:1433 cascade Cascade <> sec
