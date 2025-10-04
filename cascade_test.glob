@@ -1,0 +1,122 @@
+DIGEST d266f2e9f94476b67e1219959af3bb49
+Fcascade_test
+R24:27 Coq.Lists.List <> <> lib
+R29:31 Coq.micromega.Lia <> <> lib
+R33:41 Coq.Logic.Classical <> <> lib
+R51:63 Coq.Lists.List ListNotations <> mod
+R82:88 cascade <> <> lib
+mod 99:106 <> ToyModel
+ind 208:212 ToyModel Point
+constr 217:217 ToyModel a
+constr 221:221 ToyModel b
+constr 225:225 ToyModel c
+scheme 208:212 ToyModel Point_rect
+scheme 208:212 ToyModel Point_ind
+scheme 208:212 ToyModel Point_rec
+scheme 208:212 ToyModel Point_sind
+def 242:245 ToyModel zero
+R252:256 cascade_test ToyModel Point ind
+R269:272 Coq.Init.Logic <> True ind
+def 288:298 ToyModel on_critical
+R305:309 cascade_test ToyModel Point ind
+binder 301:301 <> p:3
+R332:332 cascade_test <> p:3 var
+R339:339 cascade_test ToyModel a constr
+R344:347 Coq.Init.Logic <> True ind
+R356:360 Coq.Init.Logic <> False ind
+def 520:523 ToyModel offc
+R530:534 cascade_test ToyModel Point ind
+binder 526:526 <> p:5
+R553:556 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R547:550 cascade_test ToyModel zero def
+R552:552 cascade_test <> p:5 var
+R557:558 Coq.Init.Logic <> ::type_scope:'~'_x not
+R559:569 cascade_test ToyModel on_critical def
+R571:571 cascade_test <> p:5 var
+ax 690:701 ToyModel cascade_many
+R709:709 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R734:742 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R710:716 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R726:727 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R721:725 cascade_test ToyModel Point ind
+binder 717:717 <> z:6
+R728:731 cascade_test ToyModel offc def
+R733:733 cascade_test <> z:6 var
+R754:756 Coq.Init.Datatypes <> nat ind
+binder 750:750 <> n:7
+R759:765 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R780:787 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R770:773 Coq.Init.Datatypes <> list ind
+R775:779 cascade_test ToyModel Point ind
+binder 766:766 <> l:8
+R801:804 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R788:793 Coq.Lists.List <> Forall ind
+R800:800 cascade_test <> l:8 var
+R795:798 cascade_test ToyModel offc def
+R812:815 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R805:809 Coq.Lists.List <> NoDup ind
+R811:811 cascade_test <> l:8 var
+R824:826 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R816:821 Coq.Init.Datatypes <> length def
+R823:823 cascade_test <> l:8 var
+R827:827 Coq.Init.Datatypes <> S constr
+R829:829 cascade_test <> n:7 var
+ax 841:854 ToyModel density_finite
+R862:868 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R876:877 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R873:875 Coq.Init.Datatypes <> nat ind
+binder 869:869 <> N:11
+R889:892 Coq.Init.Datatypes <> list ind
+R894:898 cascade_test ToyModel Point ind
+binder 885:885 <> l:12
+R920:923 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R907:912 Coq.Lists.List <> Forall ind
+R919:919 cascade_test <> l:12 var
+R914:917 cascade_test ToyModel offc def
+R931:934 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R924:928 Coq.Lists.List <> NoDup ind
+R930:930 cascade_test <> l:12 var
+R943:946 Coq.Init.Peano <> ::nat_scope:x_'<='_x not
+R935:940 Coq.Init.Datatypes <> length def
+R942:942 cascade_test <> l:12 var
+R947:947 cascade_test <> N:11 var
+prf 1025:1042 ToyModel toy_no_offcritical
+R1046:1047 Coq.Init.Logic <> ::type_scope:'~'_x not
+R1048:1054 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1064:1065 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1059:1063 cascade_test ToyModel Point ind
+binder 1055:1055 <> z:15
+R1066:1069 cascade_test ToyModel offc def
+R1071:1071 cascade_test <> z:15 var
+R1095:1117 cascade <> cascade_theorem thm
+R1157:1167 cascade_test ToyModel on_critical def
+R1137:1140 cascade_test ToyModel zero def
+R1123:1127 cascade_test ToyModel Point ind
+R1185:1196 cascade_test ToyModel cascade_many prfax
+R1206:1219 cascade_test ToyModel density_finite prfax
+R1095:1117 cascade <> cascade_theorem thm
+R1157:1167 cascade_test ToyModel on_critical def
+R1137:1140 cascade_test ToyModel zero def
+R1123:1127 cascade_test ToyModel Point ind
+R1185:1196 cascade_test ToyModel cascade_many prfax
+R1206:1219 cascade_test ToyModel density_finite prfax
+prf 1308:1334 ToyModel all_on_critical_from_axioms
+binder 1345:1345 <> z:16
+R1354:1357 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1348:1351 cascade_test ToyModel zero def
+R1353:1353 cascade_test <> z:16 var
+R1358:1368 cascade_test ToyModel on_critical def
+R1370:1370 cascade_test <> z:16 var
+R1411:1439 cascade <> all_zeros_on_critical thm
+R1533:1546 cascade_test ToyModel density_finite prfax
+R1520:1531 cascade_test ToyModel cascade_many prfax
+R1493:1503 cascade_test ToyModel on_critical def
+R1473:1476 cascade_test ToyModel zero def
+R1459:1463 cascade_test ToyModel Point ind
+R1411:1439 cascade <> all_zeros_on_critical thm
+R1533:1546 cascade_test ToyModel density_finite prfax
+R1520:1531 cascade_test ToyModel cascade_many prfax
+R1493:1503 cascade_test ToyModel on_critical def
+R1473:1476 cascade_test ToyModel zero def
+R1459:1463 cascade_test ToyModel Point ind
+R1567:1574 cascade_test ToyModel <> mod
