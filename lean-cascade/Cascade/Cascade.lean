@@ -79,8 +79,8 @@ namespace Toy
       (∀ z ∈ l, offc z) → l.Nodup → l.length ≤ N
 
   theorem noOffCritical : ¬ (∃ z, offc z) := by
-    simpa [offc] using
-      (Cascade.cascadeTheorem (C:=Point) zero onCritical axCascadeMany axDensityFinite)
+    change ¬ (∃ z, offCritical zero onCritical z)
+    exact Cascade.cascadeTheorem (C:=Point) zero onCritical axCascadeMany axDensityFinite
 
   theorem allOnCritical : ∀ z, zero z → onCritical z := by
     intro z hz
